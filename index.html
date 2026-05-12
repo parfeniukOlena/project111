@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        
+        *, 
+        *::before, 
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        body {
+            width: 100%;
+            max-width: 1280px;
+            padding: 50px 70px;
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #e9e9e9;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 20px;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+
+        p{
+            font-family: 'Space Grotesk', sans-serif;
+
+        }
+
+        .p1{
+            font-family: 'Be Vietnam Pro', sans-serif;
+            color: var(--secondary-color);
+        }
+
+        :root{
+            --primary-color: #8D4A00;
+            --secondary-color: #5A5C5C;
+            --badge-color: #FDD34D;
+            --btn-color: #FFFFFF;
+        }
+
+
+
+        .header {
+            max-height: 88px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        header ul {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }   
+        a:first-child {
+            text-decoration: none;
+            color: var(--primary-color);
+
+        }
+
+        a {
+            color: var(--secondary-color);
+        }
+
+        header li {
+            list-style: none;
+        }
+
+        a::before
+        a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width .3s;
+        }
+
+        span {
+            background-color: var(--badge-color);
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-size: 80px;
+            background: linear-gradient(100deg, #8D4A00, #f99d4c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+
+        }
+
+        .drops{
+            background-color: var(--btn-color);
+            color: black;
+        }
+
+        image {
+            width: 552px;
+            height: 736px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+                "text image"
+                "text image";
+
+            gap: 20px;
+        }
+
+        .text{
+            display:grid;
+            grid-column: span 1;
+            grid-area: text;
+        }
+
+        .image{
+            display:grid;
+            grid-column: span 2;
+            grid-area: image;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 8fr 1fr;
+            grid-template-areas: 
+                "hero images"
+                "hero images";
+            
+        }
+
+        .hero {
+            display:grid;
+            grid-column: span 1;
+            grid-area: hero;
+            
+        }
+
+        .images{
+            display:grid;
+            grid-column: span 2;
+            grid-area: images;
+            padding: 16px 8px;
+        }
+
+        blockquote{
+            font-size: 36px;
+            font-weight: 600;
+            margin-top: 50px;
+
+            border-left: 4px solid orange;
+            padding-left: 20px;
+        }
+
+        ol{
+            margin-top: 50px;
+            list-style: none;
+            padding: 0;
+        }
+
+        li{
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        mark {
+            background: #f3d458;
+            border-radius: 6px;
+            color: #2d2d2d;
+            font-weight: 600;
+
+        }
+
+        h2 {
+            font-size: 48px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container1">
+            <h3>SOLARIUM</h3>
+        </div>
+
+        <div class="container2">
+            <nav>
+                <ul>
+                    <li><a href="#">Trends</a></li>
+                    <li><a href="#">Archives</a></li>
+                    <li><a href="#">Drops</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container3">
+            <button>
+                <p>Join the Club</p>
+            </button>
+        </div>
+
+    </header>
+    <hero class="hero">
+        <div class="div hero">
+            <div>
+                <span>The Y2K Renaissance</span>
+            </div>
+            <h1>Y2K Era & <br>Streetwear</h1>
+            <div>
+                <p class="p1">Your Style — Your Rules. Curating the sun- <br>
+                drenched aesthetics of the millennium for the <br>
+                modern concrete jungle.</p>
+            </div>
+            <div>
+                <button class="explore">
+                    <p>Explore Archive -></p>
+                </button>
+                <button class="drops">
+                    <p>View Drops</p>
+                </button>
+            </div>
+            <div class="div images">
+                <img src="./images/guy.webp" alt="Guy">
+                <img src="./images/sneakers.webp" alt="Sneakers">
+            </div>
+        </div>
+    </hero>
+    <main>
+        <section class="content">
+            <div class="div text">
+                <h2>What is Y2K and why <br>is it a hit again?</h2>
+                <p class="p1">Fashion is cyclical, and today Gen Z is setting the new <br>
+                rules. We mix vintage vibes with modern aesthetics. The <br>
+                main rule of modern streetwear is <mark>absolute freedom of <br> self-expression.</mark></p>
+                
+                <blockquote>
+                    "Clothing is the easiest way to tell a story 
+                    about yourself without saying a single 
+                    word."
+                </blockquote>
+
+                <ol>
+                    <li>Layering in everything</li>
+                    <li>Oversized fit</li>
+                    <li>Bright and acid color accents</li>
+                </ol>
+            </div>
+            <div class="div image">
+                <img src="./images/girl.webp" alt="Girl">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
